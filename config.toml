@@ -1,5 +1,7 @@
-# The URL the site will be built for
 base_url = "https://kopacki.me"
+
+title = "Wojciech Kopacki"
+description = "Personal page about computers, data, electronics and everything that I enjoy!"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -14,3 +16,4 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+author = "Wojciech Kopacki"
