@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="{{ config.extra.author }}">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}wojciech kopacki, indieweb{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="site">
+        <aside class="sidebar">
+            {% include "partials/navigation.html" %}
+            <section class="contacts">
+                <h1 class="cli-heading"><code>> cat -A contacts</code></h1>
+                {% include "partials/social_links.html" %}
+        </section>
+            <section class="fun">
+                <h1 class="cli-heading"><code>> echo "Hello?"</code></h1>
+                <p>Hello?</p>
+                <h1 class="cli-sigint"><code>^C</code></h1>
+            </section>
+        </aside>
+        <main class="content">
+            {% block content %}
+            {% endblock content %}
+        </main>
+    </div>
+</body>
+
+</html>
