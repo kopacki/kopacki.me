@@ -1,1 +1,32 @@
 {% extends "section.html" %}
+
+{% block content %}
+
+<div class="h-card about">
+    <figure >
+        <img src="/images/profile.webp" alt="Website's author wandering in the forest." class="u-photo avatar"/>
+        <figcaption>In the woods, thinking whether I have left an iron turned on at home.</figcaption>
+    </figure>
+    <section class="description">
+        <p>
+            Welcome on <a href="/" class="u-url u-uid">my website</a>!
+            <span class="p-note">
+                My name is <span class="p-name">Wojciech Kopacki</span>, a.k.a. <span class="p-nickname">@kopacki</span>.
+                I find data addictive – <em>every single bit</em>.
+            </span>
+        </p>
+        <p>
+            At the moment, I live & work in <span class="p-locality">Wrocław</span>,
+            <span class="p-country-name">Poland 🇵🇱</span> as a Small <span class="p-job-title">Data Engineer</span>.
+            I enjoy hiking, computers (both high- and low-level), and I hold the title of meme connoisseur (and BCompSc, too!).
+            I'm an ex-Middle-end Engineer.
+        </p>
+        <p>
+            If you want to learn more about my qualifications, please visit the <a href="/resume">resumé</a> page.
+            If you're interested in my work preferences, go to <a href="/manual">manual</a> instead.
+            <a href="mailto:wojciech@kopacki.me" class="u-email">My mail</a> is welcome for feedback.
+        </p>
+    </section>
+</div>
+
+{% endblock content %}
