@@ -4,6 +4,13 @@
 
 <header>
     <h1>{{ page.title }}</h1>
+    {% if page.date %}
+    <span class="date-annotation">Created on <time datetime="{{ page.date }}">{{ page.date }}</time>.</span>
+    {% endif %}
+    {% if page.updated %}
+    <span class="date-annotation">Last updated on <time datetime="{{ page.updated }}">{{ page.updated }}</time>.</span>
+    {% endif %}
+
 </header>
 {{ page.content | safe }}
 
