@@ -1,0 +1,105 @@
+@use '../shared/breakpoints.scss';
+
+:root {
+    --sixteen-personalities-type-color: rgb(136, 97, 154);
+    --disc-type-color: #2f5fa5;
+    --enneagram-type-color: #dfbcda;
+}
+
+.sixteen-personalities-type {
+    &>.personality-circle {
+        background-color: var(--sixteen-personalities-type-color);
+    }
+
+    blockquote {
+        border-left: 0.5rem solid var(--sixteen-personalities-type-color);
+    }
+
+    header {
+        color: var(--sixteen-personalities-type-color);
+    }
+}
+
+.disc-type {
+    &>.personality-circle {
+        background-color: var(--disc-type-color);
+    }
+
+    blockquote {
+        border-left: 0.5rem solid var(--disc-type-color);
+    }
+
+    header {
+        color: var(--disc-type-color);
+    }
+}
+
+.enneagram-type {
+    &>.personality-circle {
+        background-color: var(--enneagram-type-color);
+    }
+
+    blockquote {
+        border-left: 0.5rem solid var(--enneagram-type-color);
+    }
+
+    header {
+        color: var(--enneagram-type-color);
+    }
+}
+
+
+.sixteen-personalities-type,
+.disc-type,
+.enneagram-type {
+    display: grid;
+    grid-template-areas:
+        "icon"
+        "description"
+    ;
+    justify-items: center;
+    margin: 0;
+    gap: 2rem;
+
+
+    @include breakpoints.horizontal-tablet-up {
+        grid-template-areas:
+            "icon description"
+        ;
+        align-items: center;
+    }
+
+    &>.personality-circle {
+        grid-area: icon;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        color: white;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    &>.description {
+        grid-area: description;
+        flex-direction: column;
+        display: flex;
+        align-items: baseline;
+
+        &>header>h3 {
+            margin: 0;
+        }
+
+        &>blockquote {
+            font-style: italic;
+            margin: 1rem 0 0;
+            padding: 0 0 0 1rem;
+        }
+    }
+}
+
+h2 {
+    border-top: 1px solid white;
+    padding-top: 1rem;
+}
