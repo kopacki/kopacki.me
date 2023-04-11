@@ -64,6 +64,7 @@
 
 .site-navigation>nav {
     white-space: pre-line;
+    font-weight: bold;
 }
 
 // fonts
@@ -73,11 +74,38 @@
 }
 
 // colors
-:root {
-    --background: black;
-    --foreground: white;
+
+html:not(.light-mode) {
+    --background: #000000;
+    --foreground: #ffffff;
     --cli-heading: #6fff6f;
     --link: #ed745e;
+
+    .theme-switcher {
+        .moon {
+            display: none;
+        }
+    }
+}
+
+html.light-mode {
+    --background: #efe9d8;
+    --foreground: #000000;
+    --cli-heading: #940000;
+    --link: #1212EC;
+
+    .theme-switcher {
+        .sun {
+            display: none;
+        }
+    }
+}
+
+
+.theme-switcher {
+    background-color: var(--background);
+    border: none;
+    cursor: pointer;
 }
 
 body {
@@ -94,8 +122,8 @@ body {
         color: var(--cli-heading);
     }
 
-    .cli-sigint {
-        color: #959595;
+    h1 {
+        margin: 0.5rem 0;
     }
 }
 

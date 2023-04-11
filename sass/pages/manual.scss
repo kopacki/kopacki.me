@@ -1,11 +1,15 @@
 @use '../shared/breakpoints.scss';
 
-:root {
+html:not(.light-mode) {
     --sixteen-personalities-type-color: #bc84c9;
     --disc-type-color: #5F9AD1;
     --enneagram-type-color: #22d2a2;
+}
 
-    --foreground-for-personalities: #000000;
+html.light-mode {
+    --sixteen-personalities-type-color: #6F1584;
+    --disc-type-color: #00498E;
+    --enneagram-type-color: #0A5642;
 }
 
 .sixteen-personalities-type {
@@ -69,6 +73,7 @@
             "icon description"
         ;
         align-items: center;
+        justify-content: start;
     }
 
     &>.personality-circle {
@@ -76,12 +81,11 @@
         border-radius: 50%;
         width: 100px;
         height: 100px;
-        color: white;
         display: grid;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        color: var(--foreground-for-personalities);
+        color: var(--background);
         font-weight: bold;
     }
 
@@ -104,6 +108,6 @@
 }
 
 h2 {
-    border-top: 1px solid white;
+    border-top: 1px solid var(--foreground);
     padding-top: 1rem;
 }
