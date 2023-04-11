@@ -51,14 +51,14 @@ Regarding "theory vs. practice," I stand in the middle - one cannot exist with t
 ### Enneagram
 
 <figure class="enneagram-type">
-    <span class="personality-circle">Type 1</span>
+    <span class="personality-circle">Type 5</span>
     <figcaption class="description">
-        <header><h3>Reformer</h3></header>
-        <blockquote>In the path towards becoming the highest version of themselves, Enneagram type Ones tend to be practical and strong people who take the time to analyze and discern what’s best. By being consistent with their ideals they expect to reform the world and so they try to strive themselves to reach that goal.</blockquote>
+        <header><h3>Investigator</h3></header>
+        <blockquote>The thinker, the innovative, the observer. Enneagram Type 5 are part of the Head Triad. The ones who want to reveal how the world works and to unveil the mystery of life, but are afraid of the biggest mystery: themselves.</blockquote>
     </figcaption>
 </figure>
 
-[Learn more about the Reformer type.](https://enneagramuniverse.com/enneagram/learn/enneagram-types/enneagram-type-1-the-reformer/)
+[Learn more about the Thinker type.](https://enneagramuniverse.com/enneagram/learn/enneagram-types/enneagram-type-5-the-investigator/)
 
 ## Preferred working hours
 
