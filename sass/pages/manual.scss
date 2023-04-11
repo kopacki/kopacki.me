@@ -1,9 +1,11 @@
 @use '../shared/breakpoints.scss';
 
 :root {
-    --sixteen-personalities-type-color: rgb(136, 97, 154);
-    --disc-type-color: #2f5fa5;
-    --enneagram-type-color: #10654D;
+    --sixteen-personalities-type-color: #bc84c9;
+    --disc-type-color: #5F9AD1;
+    --enneagram-type-color: #22d2a2;
+
+    --foreground-for-personalities: #000000;
 }
 
 .sixteen-personalities-type {
@@ -79,6 +81,8 @@
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
+        color: var(--foreground-for-personalities);
+        font-weight: bold;
     }
 
     &>.description {
