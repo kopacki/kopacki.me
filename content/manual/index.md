@@ -8,7 +8,7 @@ updated = 2023-04-06
 This manual describes all the information that exceeds a simple note on [the homepage](/).
 It contains professional and personal details, e.g., how I communicate, work, and socialize.
 
-[And what about you?](https://manualof.me/)
+[Learn more about human's manual concept.](https://manualof.me/)
 
 ## Culture & communication
 
