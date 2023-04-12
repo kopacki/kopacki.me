@@ -75,7 +75,7 @@
 
 // colors
 
-html:not(.light-mode) {
+html:not(.light-theme) {
     --background: #000000;
     --foreground: #ffffff;
     --cli-heading: #6fff6f;
@@ -88,7 +88,7 @@ html:not(.light-mode) {
     }
 }
 
-html.light-mode {
+html.light-theme {
     --background: #efe9d8;
     --foreground: #000000;
     --cli-heading: #940000;

@@ -73,22 +73,35 @@
 
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", function load() {
-        const lightModeKey = 'light-mode';
-
-        function toggleThemeMode(state) {
-            document.documentElement.classList.toggle(lightModeKey, state);
-        }
+        const preferenceKey = 'theme';
+        const uiThemeClass = 'light-theme';
 
         // Match theme on user interaction (if JS enabled).
         const themeSwitcher = document.querySelector(".theme-switcher");
-        themeSwitcher.addEventListener("click", () => {
-            document.documentElement.classList.toggle(lightModeKey);
-        });
+        themeSwitcher.addEventListener("click", () => setTheme(nextTheme()));
 
-        // Match theme on page load (if JS enabled); default is dark mode.
-        const lightThemeSubscriber = window.matchMedia("(prefers-color-scheme: light)");
-        lightThemeSubscriber.addListener((evt) => toggleThemeMode(evt.matches));
-        toggleThemeMode(lightThemeSubscriber.matches);
+
+        function getThemePreference() {
+            const hasUserToggledTheme = localStorage.getItem(preferenceKey) !== null;
+
+            const isLightThemeSelected = hasUserToggledTheme
+                ? localStorage.getItem(preferenceKey) === 'light'
+                : window.matchMedia("(prefers-color-scheme: light)").matches;
+
+            return isLightThemeSelected ? 'light' : 'dark';
+        }
+
+        function nextTheme() {
+            return getThemePreference() === 'dark' ? 'light' : 'dark';
+        }
+
+        function setTheme(changeTo) {
+            document.documentElement.classList.toggle(uiThemeClass, changeTo === 'light');
+            localStorage.setItem(preferenceKey, changeTo);
+        }
+
+        // Match theme on page load (if JS enabled).
+        setTheme(getThemePreference());
     });
 </script>
 
