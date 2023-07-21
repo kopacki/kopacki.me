@@ -1,0 +1,49 @@
+{
+  "experience": [
+    {
+      "title": "Data Engineer",
+      "organization": "Finder",
+      "organization_url": "https://finder.com.au/",
+      "from_date": "2021-12",
+      "from_date_human": "2021 December",
+      "summary": [
+        "Being a go-to person for infrastructure and its automation and deployment.",
+        "Introducing dbt and lifting-and-shifting existing data models.",
+        "Educating analysts about dbt and the best collaboration standards.",
+        "Automating data model development standards (dbt), including checking for documentation, ownership, linting, formatting, and testing during CI.",
+        "Driving the introduction and setup of the data monitoring library (elementary).",
+        "Setting up new data pipelines as well as providing clean data to work with.",
+        "'Spamming' with documentation and diagrams to decrease bus factor.",
+        "Implementing the first streaming pipeline and setting up foundations for developing new ones."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "organization": "Finder",
+      "organization_url": "https://finder.com.au/",
+      "from_date": "2020-06",
+      "from_date_human": "2020 June",
+      "to_date": "2021-11",
+      "to_date_human": "2021 November",
+      "summary": [
+        "Designed and built caching proxy with automatic cache invalidation on data refresh to speed up data fetching on front-end from multiple systems.",
+        "Drove implementation of credit score dashboard as a micro-frontend project."
+      ]
+    },
+    {
+      "title": "Junior JavaScript Engineer",
+      "organization": "Finder",
+      "organization_url": "https://finder.com.au/",
+      "from_date": "2018-07",
+      "from_date_human": "2018 July",
+      "to_date": "2020-05",
+      "to_date_human": "2020 May",
+      "summary": [
+        "Migrated to a new authentication system provider.",
+        "Refactored legacy front-end project from jQuery to TypeScript.",
+        "Improved tooling (testing frameworks, linters, formatters, Makefiles).",
+        "Wrote and maintained services' documentation and tech designs."
+      ]
+    }
+  ]
+}

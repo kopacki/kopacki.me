@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header>
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}
+    <span class="date-annotation">Created on <time datetime="{{ page.date }}">{{ page.date }}</time>.</span>
+    {% endif %}
+    {% if page.updated %}
+    <span class="date-annotation">Last updated on <time datetime="{{ page.updated }}">{{ page.updated }}</time>.</span>
+    {% endif %}
+</header>
+<main class="h-resume">
+    <h2 class="p-name">Wojciech Kopacki</h2>
+    <section class="summary">
+        <h3>Summary</h3>
+        <p class="p-summary">
+            Data Engineer in love with a functional approach.
+            Bringing the best software practices into the data world.
+            Constantly learning and having fun since 2018.
+        </p>
+    </section>
+    <section>
+        <h3>Experience</h3>
+        <ul class="p-experience">
+            {% set data = load_data(path='templates/resume.json') -%}
+            {% for job in data.experience %}
+            <li class="h-event">
+                <header>
+                    <div>
+                        <span class="p-job-title">{{ job.title }}</span>, <a class="p-org"
+                            href="{{ job.organization_url }}">{{ job.organization }}</a>
+                    </div>
+                    <div>
+                        <i>
+                            <time class="dt-start" datetime="{{ job.from_date }}">{{ job.from_date_human }}</time>
+                            –
+                            {%- if job.to_date is defined %}
+                            <time class="dt-end" datetime="{{ job.to_date }}">{{ job.to_date_human }}</time>
+                            {%- else %}
+                            present
+                            {%- endif -%}
+                        </i>
+                    </div>
+                </header>
+                <p class="p-description">
+                <ul>
+                    {% for summary in job.summary %}
+                    <li>{{ summary }}</li>
+                    {% endfor %}
+                </ul>
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section>
+        <h3>Education</h3>
+        <ul class="p-education">
+            <li class="h-event">
+                <header>
+                    <span>Bachelor of Computer Science (grade: 5.0),
+                        <br />
+                        <a href="https://pwr.edu.pl/en/">
+                            <span class="p-org">Wrocław University of Science and Technology</span>
+                        </a>
+                    </span>
+                    <span>
+                        <i>
+                            <time class="dt-start" datetime="2016">2016</time>
+                            –
+                            <time class="dt-end" datetime="2021">2021</time>
+                        </i>
+                    </span>
+                </header>
+                <p class="p-summary">
+                    Engineering thesis called "Web application helping with building privacy and security awareness on
+                    the Internet" with the idea implemented and tested with Elm programming language.
+                </p>
+            </li>
+        </ul>
+    </section>
+</main>
+
+{{ page.content | safe }}
+
+{% endblock content %}
